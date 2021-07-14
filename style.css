@@ -4,6 +4,60 @@
       font-family: 'Poppins', sans-serif;font-family: 'Poppins', sans-serif;
       margin: 0;
   }
+  /* ------------------------------------
+          Navigation Bar style 
+   ------------------------------------*/
+   .navigation{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(57, 21, 189);
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box
+    }
+   .navigation ul{
+      float: right;
+      margin-right: 20px;
+   }
+   .navigation ul li{
+       display: inline-block;
+       padding: 8px;
+       
+   }
+   .navigation ul li a{
+       color: white;
+       font-size: 17px;
+       text-transform: uppercase;
+       border-radius: 3px;
+   }
+   a.navi, a:hover{
+       transition: .5s;
+   }
+   .checkbtn{
+       font-size: 40px;
+       color: white;
+       float: right;
+       line-height: 80px;
+       margin-right: 15px;
+       cursor: pointer;
+       display: none;
+   }
+   #check{
+       display: none;
+   }
+
+   .navigation li{
+       color: white;
+       list-style: none;
+   }
+   nav li:hover{
+       background-color: rgb(0, 110, 255);
+       border-radius: 5px;
+    }
+   
+
 
   /*-------------------------
          banner style 
@@ -20,8 +74,12 @@
 }
 a:hover{
     font-size: 18px;
-    color: rgb(6, 182, 79);
     transition: font-size .5s;
+}
+.fa-arrow-alt-circle-right:hover{
+    margin-left: 7px;
+    margin-right: 3px;
+    transition: margin .8s;
 }
 .top{
     display: flex;
@@ -48,36 +106,33 @@ p{
 .watch-button{
     text-decoration: none;
     color: white;
-    background-image: linear-gradient(rgb(224, 20, 224), rgb(104, 48, 167) , rgb(11, 85, 223));
+    background-image: linear-gradient(rgb(100, 9, 100), rgb(226, 21, 182));
     padding: 10px 20px;
 }
 .fa-arrow-alt-circle-right{
     color: white;
-    margin-right: 1%;
+    margin-right: 2%;
 }
 
 
   /*-----------------------------
           players info 
   ----------------------------*/
+  
   main{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 80px;
+    margin-left: 12%;
+    margin-right: 10%;
   }
-  .container{
-    width: 1050px;
-    height: 2250px;
-}
 
   .players{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 30px;
       grid-row-gap: 30px;
-      
-      
   }
   .player{
       align-items: center;
@@ -90,8 +145,9 @@ p{
       width: 300px;
       height: 256px;
   }
+
   .player-photo:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: transform .5s;
   }
   .player:hover{
@@ -99,27 +155,61 @@ p{
       transition: transform .5s;
   }
 
+/* ========================
+Gallery Section  Start
+=========================*/
+
+#gallery {
+    margin-top: 160px;
+}
+
+#gallery .container-fluid > h2 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #ccc;
+}
+
+.container-fluid {
+    width: 96%;
+    margin: auto;
+}
+
+#gallery-images {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap: 10px 16px;
+    justify-content: center;
+}
+
+.gallery-img-item {
+    height: 100%;
+}
+
+.gallery-img-item img {
+    width: 100%;
+}
+.gallery-img-item:hover{
+    transform: scale(1.05);
+    transition: transform .5s;
+}
+
   /*-----------------------------
       Match highlights style 
   -----------------------------*/
-
   .extra{
       display: flex;
-      justify-content: center;
+      margin-top: 100px;
   }
   h3{
       font-size: 40px;
-  }
-  .gg{
-      margin-left: 8%;
-      padding: 5%;
   }
   .highlights-photo img{
       width: 567px;
       height: 427px;
   }
+
   .highlights-photo{
-      margin: 2%;
       padding: 2%;
   }
   .watch-now-button{
@@ -133,15 +223,30 @@ p{
       color: white;
       margin-left: 1%;
   }
-  .bottom{
-    display: grid;
+  .fa-arrow-right:hover{
+      margin-left: 15px;
+      transition: margin 1s;
+  }
+
+  /* -----------------------
+         Bottom style  
+  ------------------------*/
+
+.bottom{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+.logo{
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 .logo img{
-    height: 115px;
-    width: 470px;
+    height: 80px;
+    width: 340px;
   }
+
  
 
  /*------------------------
@@ -151,17 +256,13 @@ p{
  .social-icon{
     font-size: 30px;
     display: flex;
-    margin: 0 auto;
-    padding:10%;
-    
-    
 }
 .fa-instagram{
     color: orangered;
     transition: font-size .2s;
 }
 .fa-instagram:hover{
-    font-size: 50px;
+    font-size: 40px;
     color: crimson;
 }
 .fa-facebook{
@@ -169,7 +270,7 @@ p{
     transition: font-size .2s;
 }
 .fa-facebook:hover{
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(14, 57, 151);
 }
 .fa-twitter{
@@ -177,7 +278,7 @@ p{
     transition: font-size .2s;
 }
 .fa-twitter:hover{
-    font-size: 50px;
+    font-size: 40px;
     color: turquoise;
 }
 .fa-youtube{
@@ -185,14 +286,12 @@ p{
     transition: font-size .2s;
 }
 .fa-youtube:hover{
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(250, 6, 18);
 }
-
 footer{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 80px;
 }
 
   /*--------------------
@@ -201,4 +300,86 @@ footer{
 
  /* Mobile devies */
 
- @media only screen and (max-width: 650px){}
+ @media only screen and (max-width: 688px){
+
+    /* Navigation Bar Responsive */
+
+    nav ul li a{
+         font-size: 20px;
+     }
+     .checkbtn{
+         display: block;
+     }
+     ul{
+         position: absolute;
+         width: 100%;
+         height: 90vh;
+         top: 70px;
+         left: 100%;
+         text-align: center;
+         transition: all .8s;
+         display: grid;
+     }
+     nav ul li{
+         display: block;
+         line-height: 30px;
+         margin-right: 100px;
+         
+     }
+     nav ul li a{
+         font-size: 20px;
+     }
+     #check:checked ~ ul{
+         left: 0px;
+         background-image: linear-gradient(rgba(123, 34, 145, 0.995), rgba(21, 5, 255, 0.990));
+         align-items: center;
+     }
+     
+     /* Banner responsive */
+
+     .top{
+         display: flex;
+         flex-direction: column;
+     }
+
+     /* players style reponsive */
+
+     .players{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+     .container{
+        width: 100%;
+      }
+
+     /* Gallery Responsive */
+
+      #gallery {
+		margin-top: 100px;
+	}
+	
+	#gallery .container-fluid > h2 {
+		font-size: 36px;
+		line-height: 40px;
+		margin-bottom: 20px;
+		border-bottom: 3px solid #ccc;
+	}
+	
+	.container-fluid {
+		width: 98%;
+		margin: auto;
+	}
+	
+	#gallery-images {
+		display: grid;
+		grid-template-columns:repeat(2, 1fr);
+		grid-gap: 10px 16px;
+		justify-content: center;
+	}
+
+    .highlights-photo{
+        display: none;
+    }
+
+ }
