@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  
+  body{
+      font-family: 'Poppins', sans-serif;font-family: 'Poppins', sans-serif;
+      margin: 0;
+  }
+
+  /*-------------------------
+         banner style 
+  -------------------------*/
+
+.upper{
+    
+    background-color: rgb(57, 21, 189);
+    padding: 2%;
+}
+.watch{
+    margin-left: 10%;
+    padding-right: 10%;
+}
+a:hover{
+    font-size: 18px;
+    color: rgb(6, 182, 79);
+    transition: font-size .5s;
+}
+.top{
+    display: flex;
+    align-items: center;
+}
+.banner img{
+    padding-top: 25px;
+    margin-right: 50px;
+    height: 420px;
+    width: 500px;
+}
+.top img:hover{
+    transform: scale(1.1);
+    transition: transform .5s;
+    
+}
+h1{ 
+    color: white;
+    font-size: 4em;
+}
+p{
+    font-size: 15px;
+}
+.watch-button{
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(rgb(224, 20, 224), rgb(104, 48, 167) , rgb(11, 85, 223));
+    padding: 10px 20px;
+}
+.fa-arrow-alt-circle-right{
+    color: white;
+    margin-right: 1%;
+}
+
+
+  /*-----------------------------
+          players info 
+  ----------------------------*/
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+  .container{
+    width: 1050px;
+    height: 2250px;
+}
+
+  .players{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      
+      
+  }
+  .player{
+      align-items: center;
+      padding: 15px;
+      box-shadow: 5px 5px 50px rgb(173, 169, 169);
+      border-radius: 15px;
+      overflow: hidden;
+  }
+  .player-photo img{
+      width: 300px;
+      height: 256px;
+  }
+  .player-photo:hover{
+    transform: scale(1.05);
+    transition: transform .5s;
+  }
+  .player:hover{
+      transform: scale(1.02);
+      transition: transform .5s;
+  }
+
+  /*-----------------------------
+      Match highlights style 
+  -----------------------------*/
+
+  .extra{
+      display: flex;
+      justify-content: center;
+  }
+  h3{
+      font-size: 40px;
+  }
+  .gg{
+      margin-left: 8%;
+      padding: 5%;
+  }
+  .highlights-photo img{
+      width: 567px;
+      height: 427px;
+  }
+  .highlights-photo{
+      margin: 2%;
+      padding: 2%;
+  }
+  .watch-now-button{
+      text-decoration: none;
+      background-image: linear-gradient(rgb(23, 41, 122), rgb(34, 201, 159));
+      padding: 10px 20px;
+      color: rgb(252, 252, 252);
+  }
+
+  .fa-arrow-right{
+      color: white;
+      margin-left: 1%;
+  }
+  .bottom{
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+}
+.logo img{
+    height: 115px;
+    width: 470px;
+  }
+ 
+
+ /*------------------------
+     social icon style 
+ ------------------------*/
+
+ .social-icon{
+    font-size: 30px;
+    display: flex;
+    margin: 0 auto;
+    padding:10%;
+    
+    
+}
+.fa-instagram{
+    color: orangered;
+    transition: font-size .2s;
+}
+.fa-instagram:hover{
+    font-size: 50px;
+    color: crimson;
+}
+.fa-facebook{
+    color: rgb(41, 146, 187);
+    transition: font-size .2s;
+}
+.fa-facebook:hover{
+    font-size: 50px;
+    color: rgb(14, 57, 151);
+}
+.fa-twitter{
+    color: steelblue;
+    transition: font-size .2s;
+}
+.fa-twitter:hover{
+    font-size: 50px;
+    color: turquoise;
+}
+.fa-youtube{
+    color: rgb(13, 66, 165);
+    transition: font-size .2s;
+}
+.fa-youtube:hover{
+    font-size: 50px;
+    color: rgb(250, 6, 18);
+}
+
+footer{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+  /*--------------------
+       Media queries 
+  --------------------*/
+
+ /* Mobile devies */
+
+ @media only screen and (max-width: 650px){}
