@@ -2,12 +2,16 @@
   
   body{
       font-family: 'Poppins', sans-serif;font-family: 'Poppins', sans-serif;
-      margin: 0;
-  }
+        margin: 0;
+    }
+      /* display: flex;
+      flex-direction: column;
+      justify-content: center;
+  } */
   /* ------------------------------------
           Navigation Bar style 
    ------------------------------------*/
-   .navigation{
+   /* .navigation{
     display: flex;
     justify-content: center;
     background-color: rgb(57, 21, 189);
@@ -55,22 +59,24 @@
    nav li:hover{
        background-color: rgb(0, 110, 255);
        border-radius: 5px;
-    }
+    } */
    
 
 
   /*-------------------------
          banner style 
   -------------------------*/
-
 .upper{
     
     background-color: rgb(57, 21, 189);
-    padding: 2%;
+    margin: 0;
+    padding: 0;
 }
 .watch{
-    margin-left: 10%;
-    padding-right: 10%;
+    height: 550px;
+    width: 420px;
+    margin-left: 5%;
+    padding-right: 5%;
 }
 a:hover{
     font-size: 18px;
@@ -84,6 +90,7 @@ a:hover{
 .top{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 .banner img{
     padding-top: 25px;
@@ -109,6 +116,36 @@ p{
     background-image: linear-gradient(rgb(100, 9, 100), rgb(226, 21, 182));
     padding: 10px 20px;
 }
+.effect{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid red;
+    bottom: 17%;
+    left: 30%;
+    animation: rotate 7s linear infinite;
+    transition: 0.5s;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+        
+    }
+    30%{
+        border-color: rgb(4, 189, 179);
+    }
+    50%{
+        border-color: blue;
+    }
+    80%{
+        border-color: rgb(202, 172, 5);
+    }
+    100%{
+        transform: rotate(360deg);
+        border-color: rgb(238, 13, 13);
+    }
+}
 .fa-arrow-alt-circle-right{
     color: white;
     margin-right: 2%;
@@ -118,33 +155,32 @@ p{
   /*-----------------------------
           players info 
   ----------------------------*/
-  
-  main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-    margin-left: 12%;
-    margin-right: 10%;
-  }
-
-  .players{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 30px;
-      grid-row-gap: 30px;
-  }
-  .player{
-      align-items: center;
-      padding: 15px;
-      box-shadow: 5px 5px 50px rgb(173, 169, 169);
-      border-radius: 15px;
-      overflow: hidden;
-  }
-  .player-photo img{
+   .players{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       margin-top: 50px;
+       
+   }
+   .player-detail{
+       width: 300px;
+       padding: 2%;
+   }
+   .player{
+       height: 500px;
+       width: 315px;
+       margin: 10px;
+       border-radius: 15px;
+       box-shadow: 5px 5px 40px gray;
+       padding: 1%;
+    }
+       
+ .player-photo img{
       width: 300px;
       height: 256px;
-  }
+      margin: 5px;
+       padding: 1%;
+    }
 
   .player-photo:hover{
     transform: scale(1.1);
@@ -199,18 +235,30 @@ Gallery Section  Start
   -----------------------------*/
   .extra{
       display: flex;
-      margin-top: 100px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 150px;
+      padding: 1%;
+      border-radius: 20px;
+      box-shadow: 5px 5px 40px rgb(161, 159, 159);
+      
   }
+  .extra:hover{
+      transform: scale(1.02);
+      transition: transform .5s;
+  }
+
   h3{
-      font-size: 40px;
+      font-size: 35px;
   }
-  .highlights-photo img{
+   .highlights-photo img{
       width: 567px;
       height: 427px;
   }
-
-  .highlights-photo{
-      padding: 2%;
+  .gg{
+      height: 250px;
+      width: 320px;
+      margin-bottom: 50px;
   }
   .watch-now-button{
       text-decoration: none;
@@ -231,21 +279,15 @@ Gallery Section  Start
   /* -----------------------
          Bottom style  
   ------------------------*/
-
 .bottom{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-column: auto;
     justify-content: center;
-    align-items: center;
-}
-.logo{
-    margin-top: 100px;
-    margin-bottom: 50px;
 }
 .logo img{
-    height: 80px;
-    width: 340px;
-  }
+    height: 100px;
+    width: 400px;
+}
 
  
 
@@ -254,8 +296,15 @@ Gallery Section  Start
  ------------------------*/
 
  .social-icon{
+     width: 200px;
+     height: 50px;
     font-size: 30px;
     display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+}
+.fi{
+    margin: 10px;
 }
 .fa-instagram{
     color: orangered;
@@ -302,8 +351,8 @@ footer{
 
  @media only screen and (max-width: 688px){
 
-    /* Navigation Bar Responsive */
-
+    /* Navigation Bar Responsive
+    
     nav ul li a{
          font-size: 20px;
      }
@@ -336,21 +385,42 @@ footer{
      }
      
      /* Banner responsive */
+     body{
+         margin: 0;
+         padding: 0;
+         max-width: 100%;
+         overflow-x: hidden;
+     }
+     .upper{
+         margin-right: -50px;
+     }
 
      .top{
-         display: flex;
-         flex-direction: column;
+         display: grid;
+     }
+     .banner img{
+         height: 280px;
+         width: 330px;
+     }
+     .effect{
+        width: 40px;
+        height: 40px;
+        bottom: 30%;
+    }
+     .watch{
+         font-size: 15px;
+         margin: 0;
      }
 
      /* players style reponsive */
 
-     .players{
-        display: grid;
+     .player{
+        display: flex;
+        flex-direction: column;
         grid-template-columns: repeat(1, 1fr);
-      }
-
-     .container{
-        width: 100%;
+        justify-content: center;
+        overflow: hidden;
+        
       }
 
      /* Gallery Responsive */
@@ -363,12 +433,12 @@ footer{
 		font-size: 36px;
 		line-height: 40px;
 		margin-bottom: 20px;
-		border-bottom: 3px solid #ccc;
+		border-bottom: 3px solid rgb(129, 129, 129);
 	}
 	
 	.container-fluid {
 		width: 98%;
-		margin: auto;
+		margin: 20px;
 	}
 	
 	#gallery-images {
@@ -378,8 +448,23 @@ footer{
 		justify-content: center;
 	}
 
-    .highlights-photo{
-        display: none;
+    .extra{
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        border: 5px 5px 40px gray;
     }
-
- }
+    .gg{
+        font-size: 10px;
+    }
+    .logo img{ 
+        margin-top: 50px;
+        justify-content: center;
+        width: 97%;
+    }
+    .highlights-photo img{
+        height: 300px;
+        width: 400px;
+        margin-top: 100px;
+    }
+}
